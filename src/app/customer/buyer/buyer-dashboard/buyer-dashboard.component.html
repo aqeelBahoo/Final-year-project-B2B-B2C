@@ -1,0 +1,41 @@
+<br>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Buyer</a></li>
+        <li class="breadcrumb-item"><a routerLink="/buyer-dashboard">Products</a></li>
+    </ol>
+</nav>
+<form class="form-inline my-2 my-lg-0" [formGroup]="form">
+    <input class="form-control mr-sm-2" formControlName="search" type="search"
+        placeholder="Search"
+        aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0"
+        (click)="searchProduct()">Search</button>
+</form>
+<div class="row">
+    <div class="col-sm-4 product" *ngFor="let product of all_products;">
+        <div class="card">
+            <img src="{{product.uploadPhoto}}" class="card-img-top"
+                alt="{{product.name}}">
+            <div class="card-body">
+
+                <h4 class="card-title">
+                    {{product.name}}
+                </h4>
+                <p><span class="float-left"><strong>MRP</strong>: <del>{{product.mrp}}</del></span>
+                    <span class="float-right"><strong>DP</strong>:
+                        {{product.dp}}</span></p>
+                <br>
+                <p class="card-text product-desc">{{product.productDesc}}</p>
+                <button class="btn btn-primary float-left"
+                    [disabled]="product.disabled"
+                    (click)="addToCart(product)">{{product.disabled ? 'Added' :
+                    'Add
+                    to Cart'}}</button>
+                <button class="btn btn-primary float-right"
+                    *ngIf="!product.disabled"
+                    (click)="buyProduct(product)">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
