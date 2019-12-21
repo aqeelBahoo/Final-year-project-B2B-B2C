@@ -96,23 +96,23 @@
   "products": [
     {
       "id": 2,
-      "sellerId": 4,
       "name": "Nestle Water Bottle",
       "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/bottle/w/5/g/1000-cello-h2o-cello-h2o-water-bottel-cello-original-imaeqtj3vyxyehmn.jpeg",
       "productDesc": "Hygienic bottle: The bottle is made of 100% food grade material & is BPA free ensures a safe drinking. Crystal Clarity: It's sheer body helps to easily identify the contents & also adds beauty to the liquid that you put in, Leak Proof: The bottle has a liquid tight cap that prevents leakage & is unbreakable. Freezer safe: These bottles are compatible with refrigerator & not being curvy the bottle occupies less space. Looks pretty in the fridge or on the table top.",
       "mrp": "123",
       "dp": "99",
-      "status": "publish"
+      "status": "publish",
+      "sellerId": 1
     },
     {
       "id": 3,
-      "sellerId": 4,
       "name": "Self Design Pillows Cover",
       "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jjsw4nk0/cushion-pillow-cover/e/z/z/epl12-metro-living-original-imaf7ah6zstjyevd.jpeg",
       "productDesc": "Regional Speciality\nRajasthan\nFabric Care\nMachinne Wash, Do not Bleach, Wash in Cold Water\nThread Count\n104\nSales Package\nPack of 2 Pillow Cover",
       "mrp": "500",
       "dp": "399",
-      "status": "publish"
+      "status": "rejected",
+      "sellerId": 1
     },
     {
       "id": 4,
@@ -231,6 +231,56 @@
       "productDesc": "this is descriotion",
       "mrp": "120",
       "dp": "100",
+      "status": "publish",
+      "sellerId": 2
+    },
+    {
+      "id": 16,
+      "name": "new product 1234567",
+      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jjsw4nk0/cushion-pillow-cover/e/z/z/epl12-metro-living-original-imaf7ah6zstjyevd.jpeg",
+      "productDesc": "this is description",
+      "mrp": "120",
+      "dp": "100",
+      "status": "rejected",
+      "sellerId": 1
+    },
+    {
+      "id": 17,
+      "name": "new product 2",
+      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jjsw4nk0/cushion-pillow-cover/e/z/z/epl12-metro-living-original-imaf7ah6zstjyevd.jpeg",
+      "productDesc": "this is description",
+      "mrp": "200",
+      "dp": "150",
+      "status": "rejected",
+      "sellerId": 1
+    },
+    {
+      "id": 18,
+      "name": "new proeduct test",
+      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
+      "productDesc": "dsfdsf",
+      "mrp": "400",
+      "dp": "250",
+      "status": "rejected",
+      "sellerId": 1
+    },
+    {
+      "id": 19,
+      "name": "new proeduct test 2",
+      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
+      "productDesc": "sfsfd",
+      "mrp": "220",
+      "dp": "200",
+      "status": "rejected",
+      "sellerId": 1
+    },
+    {
+      "id": 20,
+      "name": "new product test 2",
+      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
+      "productDesc": "this is description",
+      "mrp": "400",
+      "dp": "350",
       "status": "publish",
       "sellerId": 2
     }

@@ -16,12 +16,13 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Seller Id</th>
-            <th scope="col">Product Name</th>
             <th scope="col">Product Image</th>
+            <th scope="col">Product Name</th>
             <!-- <th scope="col">Display Image</th> -->
             <th scope="col">MRP</th>
             <th scope="col">DP</th>
             <!-- <th scope="col">Description</th> -->
+            <th scope="col" *ngIf="user_role === 'admin'">Approve/Reject</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>
         </tr>
@@ -35,9 +36,23 @@
                     width="200">
             </td>
             <td>{{product_data.name}}</td>
+
             <!-- <td>{{product_data.uploadPhoto}}</td> -->
             <td>{{product_data.mrp}}</td>
             <td>{{product_data.dp}}</td>
+            <td *ngIf="user_role === 'admin'">
+                <span class="sim-pointer" (click)="updateStatus(product_data,
+                    'publish')">
+                    <i class="fa fa-check-circle" style="color: green;
+                        font-size: 40px;"></i>
+                </span>
+                &nbsp;&nbsp;&nbsp;
+                <span class="sim-pointer" (click)="updateStatus(product_data,
+                    'rejected')">
+                    <i class="fa fa-times-circle" style="color: red;
+                        font-size: 40px;"></i>
+                </span>
+            </td>
             <!-- <td>{{product_data.productDesc}}</td> -->
             <td>{{product_data.status}}</td>
             <td>
@@ -139,8 +154,10 @@
                                     formControlName="status"
                                     [ngClass]="{'is-invalid':addEditProduct &&
                                     rf.status.errors}">
+                                    <option value="requested">Upload</option>
                                     <option value="draft">Draft</option>
-                                    <option value="publish">Publish</option>
+                                    <option value="publish" *ngIf="user_role ===
+                                        'admin'">Publish</option>
                                     <option value="inactive">Inactive</option>
                                 </select>
                                 <div *ngIf="addEditProduct && rf.status.errors"

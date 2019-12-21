@@ -134,12 +134,31 @@ export class ProductCrudComponent implements OnInit {
       mrp: this.product_data.mrp,
       dp: this.product_data.dp,
       status: this.product_data.status,
-      sellerId: this.user_session_id
-
+      sellerId: this.single_product_data
     }
     this.product_service.updateProduct(this.edit_product_id, this.product_dto).subscribe(data => {
+      this.single_product_data = undefined;
+      this.product_data = undefined;
       // console.log(data);
       jQuery('#addEditProductModal').modal('toggle');
+      this.getAllProduct();
+    }, err => {
+      alert("Some Error Occured");
+    })
+  }
+  updateStatus(product, status) {
+    this.product_data = product;
+    this.product_dto = {
+      id: 0,
+      name: this.product_data.name,
+      uploadPhoto: this.product_data.uploadPhoto,
+      productDesc: this.product_data.productDesc,
+      mrp: this.product_data.mrp,
+      dp: this.product_data.dp,
+      status,
+      sellerId: product.sellerId
+    }
+    this.product_service.updateProduct(product.id, this.product_dto).subscribe(data => {
       this.getAllProduct();
     }, err => {
       alert("Some Error Occured");

@@ -28,8 +28,11 @@
                         <div class="card-title">
                             <div>
                                 <h4 style="display: inline;">{{individual_product?.name}}</h4>
-                                <button class="btn btn-danger float-right"
-                                    (click)="deleteItem(i)">X</button>
+                                <span (click)="deleteItem(i)" class="sim-pointer
+                                    float-right"><i
+                                        class="fa
+                                        fa-trash" aria-hidden="true"></i>
+                                </span>
                             </div>
                         </div>
                         <br>
