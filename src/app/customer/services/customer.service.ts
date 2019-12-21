@@ -18,7 +18,7 @@ export class CustomerService {
   constructor(private apiService: ApiService) { }
 
   allProduct(): Observable<any> {
-    return this.apiService.get(this.product_url)
+    return this.apiService.get(`${this.product_url}?status=publish`);
   }
   getSearchProduct(name: string): Observable<any> {
     return this.apiService.get(`${this.product_url}?name=${name}`);

@@ -17,6 +17,7 @@
             <th scope="col">#</th>
             <th scope="col">Seller Id</th>
             <th scope="col">Product Name</th>
+            <th scope="col">Product Image</th>
             <!-- <th scope="col">Display Image</th> -->
             <th scope="col">MRP</th>
             <th scope="col">DP</th>
@@ -29,6 +30,10 @@
         <tr *ngFor="let product_data of all_product_data; let i= index">
             <th scope="row">{{i+1}}</th>
             <td>{{product_data.sellerId}}</td>
+            <td>
+                <img [src]="product_data.uploadPhoto" alt="product image"
+                    width="200">
+            </td>
             <td>{{product_data.name}}</td>
             <!-- <td>{{product_data.uploadPhoto}}</td> -->
             <td>{{product_data.mrp}}</td>

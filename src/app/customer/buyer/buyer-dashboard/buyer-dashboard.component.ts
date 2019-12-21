@@ -15,12 +15,12 @@ export class BuyerDashboardComponent implements OnInit {
 
   form = new FormGroup({
     search: new FormControl(''),
-  })
+  });
 
   constructor(private router: Router, private customerService: CustomerService) { }
 
   ngOnInit() {
-    this.getAllProduct()
+    this.getAllProduct();
   }
   searchProduct() {
     const value = this.form.controls.search.value.trim();
@@ -37,16 +37,16 @@ export class BuyerDashboardComponent implements OnInit {
       this.all_products = data;
       // console.log("ALl Product", this.all_products);
     }, error => {
-      console.log("My error", error);
-    })
+      console.log('My error', error);
+    });
   }
   getSearchProduct(value: string) {
     this.customerService.getSearchProduct(value).subscribe(data => {
       this.all_products = data;
       // console.log("ALl Product", this.all_products);
     }, error => {
-      console.log("My error", error);
-    })
+      console.log('My error', error);
+    });
   }
 
   buyProduct(product) {
@@ -54,7 +54,7 @@ export class BuyerDashboardComponent implements OnInit {
     this.show_checkout = true;
     // this.customerService.quickBuyProduct(id) //We pass to serice from service we can access in another component
     this.addToCart(product);
-    this.router.navigateByUrl("/checkout");
+    this.router.navigateByUrl('/checkout');
   }
 
   addToCart(product) {
