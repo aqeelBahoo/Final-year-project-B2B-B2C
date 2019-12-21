@@ -101,15 +101,17 @@
         </ul>
         <ul class="navbar-nav ml-auto" *ngIf="logged_in">
             <li class="nav-item">
+                <a class="nav-link sim-pointer" *ngIf="user_role === 'buyer'"
+                    routerLink="/checkout"> <span>
+                        <i class="fa fa-cart-arrow-down" style="color: white;
+                            font-size: 30px;"></i>
+                    </span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link sim-pointer" routerLink="/my-profile">{{'header.my_profile'
                     | translate}}</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link sim-pointer" *ngIf="user_role === 'buyer'"
-                    routerLink="/checkout"> <span>
-                        <i class="cart-arrow-down"></i>
-                    </span></a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link sim-pointer" (click)="logOut()">{{'header.signout'
                     | translate}}</a>
