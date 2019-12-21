@@ -16,8 +16,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OrderListComponent } from './order-list/order-list.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/", pathMatch: "full" },
-  { path: "", component: HomeComponent },
+  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
   { path: "my-profile", component: UserProfileComponent },
   { path: "contact-us", component: ContactUsComponent },
   //Path/component you want to access before admin login/signin
